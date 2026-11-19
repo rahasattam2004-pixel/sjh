@@ -620,7 +620,54 @@
         }
     </style>
     <script>document.querySelectorAll('.footer-year').forEach(el => el.textContent = new Date().getFullYear());</script>
-    <script>const menuButton = document.getElementById('menu'), navLinks = document.getElementById('navlinks'); if (menuButton) menuButton.onclick = () => { const open = navLinks.classList.toggle('open'); menuButton.textContent = open ? '×' : '☰' }; document.getElementById('year').textContent = new Date().getFullYear(); document.getElementById('contactForm').addEventListener('submit', event => { event.preventDefault(); const form = event.currentTarget; const data = new FormData(form); const details = ['SJH INVESTMENT - Website Enquiry', '', 'Name: ' + (data.get('name') || ''), 'Phone: ' + (data.get('phone') || ''), 'Email: ' + (data.get('email') || 'Not provided'), 'Enquiry about: ' + (data.get('subject') || ''), '', 'Message:', (data.get('message') || '')]; const url = 'https://wa.me/919732723757?text=' + encodeURIComponent(details.join('\n')); document.getElementById('contactStatus').classList.add('show'); window.open(url, '_blank', 'noopener,noreferrer') });</script>
+    <script>
+    (() => {
+        const menuButton = document.getElementById('menu');
+        const navLinks = document.getElementById('navlinks');
+        if (menuButton && navLinks) {
+            menuButton.addEventListener('click', () => {
+                const open = navLinks.classList.toggle('open');
+                menuButton.textContent = open ? '×' : '☰';
+                menuButton.setAttribute('aria-expanded', String(open));
+            });
+        }
+
+        document.querySelectorAll('.footer-year').forEach(el => {
+            el.textContent = new Date().getFullYear();
+        });
+
+        const form = document.getElementById('contactForm');
+        if (!form) return;
+
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            if (!form.reportValidity()) return;
+
+            const data = new FormData(form);
+            const message = [
+                'SJH INVESTMENT - Website Enquiry',
+                '',
+                'Name: ' + (data.get('name') || ''),
+                'Phone: ' + (data.get('phone') || ''),
+                'Email: ' + (data.get('email') || 'Not provided'),
+                'Enquiry about: ' + (data.get('subject') || ''),
+                '',
+                'Message:',
+                data.get('message') || ''
+            ].join('\n');
+
+            const whatsappUrl = 'https://wa.me/919732723757?text=' + encodeURIComponent(message);
+            const status = document.getElementById('contactStatus');
+            if (status) {
+                status.textContent = 'Opening WhatsApp with your enquiry. Please review the message and tap Send in WhatsApp.';
+                status.classList.add('show');
+            }
+
+            // Navigate directly so popup blockers cannot silently block the WhatsApp window.
+            window.location.href = whatsappUrl;
+        });
+    })();
+    </script>
 </body>
 
 </html>
