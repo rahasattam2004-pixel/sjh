@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#18241e">
+  <meta name="description" content="Explore SJH Investment savings and investment plan information, including RD, DDP, MIP, FD and dedicated savings plan categories.">
+  <title>SJH Investment | Explore Savings Plans</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    :root{--home-ink:#1e2922;--home-green:#1c3026;--home-gold:#c6a467;--home-muted:#74796f;--home-cream:#f7f5ef}
+    .home-hero{position:relative;overflow:hidden;background:linear-gradient(112deg,#17271f 0%,#20392d 60%,#34483a 100%);color:#fff;min-height:570px;display:flex;align-items:center}
+    .home-hero:before,.home-hero:after{content:"";position:absolute;border:1px solid rgba(210,184,130,.22);border-radius:50%;pointer-events:none}
+    .home-hero:before{width:550px;height:550px;right:-95px;top:-130px;box-shadow:0 0 0 35px rgba(210,184,130,.035),0 0 0 75px rgba(210,184,130,.025),0 0 0 120px rgba(210,184,130,.02)}
+    .home-hero:after{width:330px;height:330px;right:15px;top:-18px;border-color:rgba(210,184,130,.14)}
+    .hero-inner{position:relative;z-index:1;max-width:1180px;width:100%;margin:auto;padding:88px 25px;display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+    .home-kicker{display:inline-flex;align-items:center;gap:11px;color:#e0c58f;font-size:11px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase}
+    .home-kicker:before{content:"";width:27px;height:1px;background:var(--home-gold)}
+    .home-hero h1{font:normal clamp(44px,6vw,72px)/1.07 Georgia,serif;letter-spacing:-1.8px;max-width:650px;margin:22px 0}
+    .home-hero h1 em{color:#dfc38a;font-style:italic}
+    .home-hero p{max-width:560px;color:#d0d8d1;font-size:15px;line-height:1.9;margin:0}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .home-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 21px;border-radius:5px;background:#c6a467;color:#1b281f;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+    .home-btn.secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+    .hero-art{position:relative;min-height:340px;display:grid;place-items:center}
+    .art-orbit{position:absolute;width:310px;height:310px;border:1px solid rgba(219,192,139,.36);border-radius:50%;transform:rotate(-24deg)}
+    .art-orbit:before,.art-orbit:after{content:"";position:absolute;border:1px solid rgba(219,192,139,.23);border-radius:50%;inset:25px}
+    .art-orbit:after{inset:52px}
+    .art-card{position:relative;width:min(100%,330px);padding:30px 27px;border:1px solid rgba(225,204,164,.45);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.04));backdrop-filter:blur(8px);box-shadow:0 25px 70px rgba(0,0,0,.18)}
+    .art-monogram{width:56px;height:56px;display:grid;place-items:center;border:1px solid #d6b978;border-radius:50%;color:#e4ca91;font:30px Georgia;margin-bottom:24px}
+    .art-card small{color:#e1c68e;letter-spacing:2px;text-transform:uppercase;font-size:9px}
+    .art-card h2{font:27px Georgia;margin:10px 0 8px;color:#fff}
+    .art-card p{font-size:12px;line-height:1.7;color:#d1d8d1}
+    .art-line{height:1px;background:rgba(255,255,255,.2);margin:21px 0}
+    .art-foot{display:flex;justify-content:space-between;color:#e4d5b4;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+    .home-proof{background:#fff;border-bottom:1px solid #eee9df}
+    .proof-inner{max-width:1180px;margin:auto;padding:23px 25px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .proof-item{display:flex;align-items:center;justify-content:center;gap:12px;color:#565d54;font-size:12px}
+    .proof-num{font:26px Georgia;color:#a17d40}
+    .home-section{max-width:1180px;margin:auto;padding:82px 25px}
+    .home-section-head{text-align:center;max-width:650px;margin:0 auto 38px}
+    .home-section-head .eyebrow{color:#9b7943}
+    .home-section-head h2{font:normal clamp(31px,4vw,43px) Georgia;margin:13px 0;color:var(--home-ink)}
+    .home-section-head p{font-size:14px;color:var(--home-muted);line-height:1.8;margin:0}
+    .home-plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .home-plan-card{position:relative;display:flex;flex-direction:column;min-height:220px;padding:25px;border:1px solid #e8e3d8;border-radius:12px;background:#fff;transition:transform .2s,box-shadow .2s,border-color .2s}
+    .home-plan-card:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(38,42,32,.08);border-color:#d4c29e}
+    .plan-card-top{display:flex;align-items:center;justify-content:space-between}
+    .plan-symbol{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;background:#f4efe4;color:#98743d;font:21px Georgia}
+    .plan-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#969287}
+    .home-plan-card h3{font:23px Georgia;font-weight:normal;color:#26342b;margin:19px 0 8px}
+    .home-plan-card p{font-size:13px;color:#77796f;line-height:1.65;margin:0 0 20px}
+    .home-plan-card .plan-link{margin-top:auto;color:#94713b;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+    .home-plan-card .plan-link span{font-size:16px;margin-left:5px}
+    .home-about-band{background:#f6f4ed}
+    .about-inner{max-width:1180px;margin:auto;padding:78px 25px;display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:center}
+    .about-visual{min-height:310px;position:relative;display:grid;place-items:center;background:linear-gradient(140deg,#e9e1d0,#d6c8a9);border-radius:14px;overflow:hidden}
+    .about-visual:before,.about-visual:after{content:"";position:absolute;border:1px solid rgba(125,96,48,.25);border-radius:50%;width:260px;height:260px}
+    .about-visual:after{width:200px;height:200px}
+    .about-visual-mark{position:relative;z-index:1;width:95px;height:95px;border:1px solid #94733e;border-radius:50%;display:grid;place-items:center;color:#876632;font:52px Georgia}
+    .about-copy .eyebrow{color:#96723b}
+    .about-copy h2{font:normal clamp(31px,4vw,43px)/1.18 Georgia;color:#253329;margin:14px 0}
+    .about-copy p{font-size:14px;line-height:1.9;color:#70746b}
+    .text-link{display:inline-block;margin-top:10px;color:#8c6a34;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;border-bottom:1px solid #cbb27f;padding-bottom:7px}
+    .home-contact{max-width:1180px;margin:0 auto;padding:75px 25px}
+    .contact-banner{padding:43px 48px;border-radius:14px;background:linear-gradient(110deg,#20382b,#2b4536);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .contact-banner .eyebrow{color:#e0c58f}
+    .contact-banner h2{font:normal clamp(27px,3.5vw,38px) Georgia;margin:12px 0}
+    .contact-banner p{font-size:13px;line-height:1.7;color:#d1d8d1;margin:0;max-width:550px}
+    .contact-banner .home-btn{flex-shrink:0}
+    .home-disclaimer{text-align:center;color:#8a897f;font-size:11px;line-height:1.7;padding:0 20px 35px}
+    @media(max-width:850px){.hero-inner{grid-template-columns:1fr;gap:15px;padding:75px 25px}.hero-art{min-height:275px}.art-orbit{width:260px;height:260px}.home-plan-grid{grid-template-columns:repeat(2,1fr)}.about-inner{gap:35px}.contact-banner{padding:35px;}}
+    @media(max-width:600px){.home-hero{min-height:auto}.hero-inner{padding:64px 20px 48px}.home-hero h1{font-size:46px}.hero-art{min-height:250px}.art-card{max-width:290px;padding:23px}.art-orbit{width:235px;height:235px}.proof-inner{grid-template-columns:1fr;gap:12px;padding:19px}.proof-item{justify-content:flex-start}.home-section{padding:62px 17px}.home-plan-grid{grid-template-columns:1fr}.home-plan-card{min-height:195px}.about-inner{grid-template-columns:1fr;padding:60px 17px}.about-visual{min-height:230px}.home-contact{padding:55px 17px}.contact-banner{padding:29px 23px;align-items:flex-start;flex-direction:column}.contact-banner .home-btn{width:100%}}
+  </style>
+</head>
+<body>
+  <div class="announcement">SJH Investment <span aria-hidden="true">·</span> Plan information & enquiries</div>
+  <header>
+    <nav class="mainnav" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>SJH INVESTMENT</strong><small>PLAN INFORMATION</small></span></a>
+      <div class="navlinks" id="navlinks"><a href="index.html" class="active">Home</a><a href="plans.html">Plans</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <a class="nav-cta" href="plans.html">View all plans</a>
+      <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="home-hero">
+      <div class="hero-inner">
+        <div>
+          <span class="home-kicker">Savings & investment plan information</span>
+          <h1>Make your next step a <em>well-informed</em> one.</h1>
+          <p>Explore the savings and investment plan categories featured by SJH Investment. Browse dedicated plan pages, review the available tables and contact us when you need more information.</p>
+          <div class="hero-actions"><a class="home-btn" href="plans.html">Explore all plans <span>→</span></a><a class="home-btn secondary" href="contact.html">Talk to us</a></div>
+        </div>
+        <div class="hero-art" aria-label="SJH Investment brand graphic">
+          <div class="art-orbit"></div>
+          <div class="art-card"><div class="art-monogram">S</div><small>Explore with clarity</small><h2>SJH Investment</h2><p>A simple place to explore plan categories and find the information you need.</p><div class="art-line"></div><div class="art-foot"><span>Plan information</span><span>Since SJH</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-proof" aria-label="Website overview">
+      <div class="proof-inner">
+        <div class="proof-item"><span class="proof-num">07</span><span>Plan categories to explore</span></div>
+        <div class="proof-item"><span class="proof-num">07</span><span>Dedicated plan information pages</span></div>
+        <div class="proof-item"><span class="proof-num">01</span><span>Simple place to send enquiries</span></div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="home-section-head"><span class="eyebrow">Explore our categories</span><h2>Find the plan information you need</h2><p>Choose a category below to open its dedicated page and review the information currently published.</p></div>
+      <div class="home-plan-grid">
+        <a class="home-plan-card" href="rd.html"><div class="plan-card-top"><span class="plan-symbol">↻</span><span class="plan-label">4 duration options</span></div><h3>Recurring Deposit (RD)</h3><p>Explore RD plan information with 2, 3, 5 and 7 year options.</p><span class="plan-link">View RD details <span>→</span></span></a>
+        <a class="home-plan-card" href="ddp.html"><div class="plan-card-top"><span class="plan-symbol">◇</span><span class="plan-label">2 duration options</span></div><h3>Daily Deposit Plan (DDP)</h3><p>View the available DDP information and duration options.</p><span class="plan-link">View DDP details <span>→</span></span></a>
+        <a class="home-plan-card" href="mip.html"><div class="plan-card-top"><span class="plan-symbol">₹</span><span class="plan-label">Plan details</span></div><h3>Monthly Income Plan (MIP)</h3><p>Open the MIP page to review the published plan information.</p><span class="plan-link">View MIP details <span>→</span></span></a>
+        <a class="home-plan-card" href="fd.html"><div class="plan-card-top"><span class="plan-symbol">▣</span><span class="plan-label">Plan details</span></div><h3>Fixed Deposit (FD)</h3><p>Review the Fixed Deposit plan information in its own page.</p><span class="plan-link">View FD details <span>→</span></span></a>
+        <a class="home-plan-card" href="sukanya.html"><div class="plan-card-top"><span class="plan-symbol">✿</span><span class="plan-label">Savings plan</span></div><h3>Sukanya Bachat Plan</h3><p>Explore the available Sukanya Bachat Plan information.</p><span class="plan-link">View plan details <span>→</span></span></a>
+        <a class="home-plan-card" href="pension.html"><div class="plan-card-top"><span class="plan-symbol">⌛</span><span class="plan-label">Savings plan</span></div><h3>Pension Bachat Plan</h3><p>Review the published Pension Bachat Plan details.</p><span class="plan-link">View plan details <span>→</span></span></a>
+        <a class="home-plan-card" href="education.html"><div class="plan-card-top"><span class="plan-symbol">⌂</span><span class="plan-label">Savings plan</span></div><h3>Education Bachat Plan</h3><p>Explore the published Education Bachat Plan information.</p><span class="plan-link">View plan details <span>→</span></span></a>
+      </div>
+    </section>
+
+    <section class="home-about-band">
+      <div class="about-inner">
+        <div class="about-visual" aria-hidden="true"><div class="about-visual-mark">S</div></div>
+        <div class="about-copy"><span class="eyebrow">About SJH Investment</span><h2>Plan information, organised in one place.</h2><p>SJH Investment presents seven savings and investment plan categories through individual pages. Visitors can browse the available tables and duration options, then use the contact page to send a question about a particular plan or a general enquiry.</p><a class="text-link" href="about.html">Learn more about SJH <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="home-contact">
+      <div class="contact-banner"><div><span class="eyebrow">Have a question?</span><h2>We're here to hear from you.</h2><p>For questions about a plan or the information shown on this website, send an enquiry through our contact page or start a WhatsApp chat.</p></div><a class="home-btn" href="contact.html">Contact SJH <span>→</span></a></div>
+    </section>
+    <p class="home-disclaimer">Website information is provided for reference and enquiry purposes. Please contact SJH Investment directly to confirm current plan details, terms and conditions before making any decision.</p>
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a class="footer-logo" href="index.html"><span class="footer-mark">S</span><span><strong>SJH INVESTMENT</strong><small>PLAN INFORMATION</small></span></a>
+      <p>Explore savings and investment plan information in one place. For plan enquiries and further details, get in touch with our team.</p>
+    </div>
+    <div class="footer-contact">
+      <span class="footer-heading">CONTACT</span>
+      <a href="mailto:rahasattam2004@gmail.com">rahasattam2004@gmail.com</a>
+      <a href="tel:+919732723757">+91 97327 23757</a>
+      <span>Canning, West Bengal</span>
+    </div>
+    <div class="footer-action">
+      <span class="footer-heading">NEED HELP?</span>
+      <p>Have a question about one of our plans? Send us an enquiry.</p>
+      <a class="footer-whatsapp" href="https://wa.me/919732723757" target="_blank" rel="noopener">Chat on WhatsApp <span>↗</span></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span class="footer-year"></span> SJH Investment. All rights reserved.</span>
+    <span class="footer-note">Plan information for reference. Please confirm current terms before making a decision.</span>
+  </div>
+</footer>
+<style>
+.site-footer{background:#17251e;color:#e9e8df;margin-top:0;padding:0 24px}
+.site-footer *{box-sizing:border-box}
+.footer-main{max-width:1180px;margin:auto;padding:55px 0 42px;display:grid;grid-template-columns:1.3fr .9fr .9fr;gap:55px}
+.footer-logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.footer-mark{width:43px;height:43px;border:1px solid #c5a366;border-radius:50%;display:grid;place-items:center;color:#dfc38a;font:25px Georgia}
+.footer-logo strong{display:block;font: bold 14px Georgia;letter-spacing:2px}
+.footer-logo small{display:block;color:#c4ad7c;font-size:8px;letter-spacing:2px;margin-top:4px}
+.footer-brand p,.footer-action p{max-width:360px;color:#b9c1b9;font-size:12px;line-height:1.85;margin:19px 0 0}
+.footer-heading{display:block;color:#d8bc83;font-size:9px;font-weight:700;letter-spacing:2px;margin:4px 0 18px}
+.footer-contact a,.footer-contact span{display:block;color:#d8ded7;text-decoration:none;font-size:12px;margin:0 0 13px;line-height:1.5}
+.footer-contact a:hover{color:#e4c98e}
+.footer-action p{margin:0 0 17px}
+.footer-whatsapp{display:inline-flex;align-items:center;gap:16px;padding:11px 15px;border:1px solid rgba(216,188,131,.6);border-radius:5px;color:#e6d4ad;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.5px}
+.footer-whatsapp:hover{background:rgba(216,188,131,.1)}
+.footer-whatsapp span{font-size:16px}
+.footer-bottom{max-width:1180px;margin:auto;padding:17px 0 20px;border-top:1px solid rgba(255,255,255,.13);display:flex;justify-content:space-between;gap:20px;color:#aeb7ad;font-size:10px;line-height:1.6}
+.footer-note{text-align:right;max-width:520px}
+@media(max-width:700px){.site-footer{padding:0 19px}.footer-main{grid-template-columns:1fr;gap:28px;padding:42px 0 30px}.footer-brand p{max-width:100%}.footer-bottom{flex-direction:column;gap:6px}.footer-note{text-align:left}}
+</style>
+<script>document.querySelectorAll('.footer-year').forEach(el=>el.textContent=new Date().getFullYear());</script>
+  <script src="assets/script.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

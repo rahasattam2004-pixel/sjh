@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#151b19">
+    <title>Contact | SJH Investment</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .contact-hero {
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at 82% 18%, rgba(202, 164, 91, .22), transparent 30%), linear-gradient(125deg, #151d1a, #26352e);
+            color: #fff;
+            padding: 76px 24px 86px
+        }
+
+        .contact-hero:after {
+            content: "";
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            border: 1px solid rgba(220, 190, 128, .2);
+            border-radius: 50%;
+            right: -100px;
+            bottom: -220px;
+            box-shadow: 0 0 0 35px rgba(220, 190, 128, .035), 0 0 0 75px rgba(220, 190, 128, .025)
+        }
+
+        .contact-hero-inner {
+            max-width: 1120px;
+            margin: auto;
+            position: relative;
+            z-index: 1
+        }
+
+        .contact-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            color: #e3c98e;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 11px;
+            font-weight: 700
+        }
+
+        .contact-kicker:before {
+            content: "";
+            width: 24px;
+            height: 1px;
+            background: #c6a35e
+        }
+
+        .contact-hero h1 {
+            font: clamp(38px, 6vw, 62px)/1.08 Georgia, serif;
+            max-width: 680px;
+            margin: 18px 0 16px;
+            letter-spacing: -1.4px
+        }
+
+        .contact-hero p {
+            max-width: 570px;
+            color: #d4d9d4;
+            line-height: 1.8;
+            margin: 0;
+            font-size: 16px
+        }
+
+        .contact-main {
+            max-width: 1120px;
+            margin: -34px auto 78px;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 22px;
+            align-items: stretch
+        }
+
+        .contact-info,
+        .contact-form-card {
+            border: 1px solid #e9e4d9;
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 16px 50px rgba(27, 31, 26, .08)
+        }
+
+        .contact-info {
+            padding: 34px;
+            background: #f8f6f0
+        }
+
+        .contact-info h2,
+        .contact-form-card h2 {
+            font: 30px Georgia, serif;
+            color: #222b25;
+            margin: 12px 0
+        }
+
+        .contact-info>p,
+        .contact-form-card>p {
+            color: #77766e;
+            line-height: 1.75;
+            font-size: 14px
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 19px 0;
+            border-bottom: 1px solid #e7e1d5
+        }
+
+        .contact-detail:last-of-type {
+            border-bottom: 0
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+            flex: 0 0 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: #eee7d7;
+            color: #8a682e;
+            font-size: 18px
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: #30372f;
+            font-size: 14px;
+            margin: 2px 0 5px
+        }
+
+        .contact-detail span {
+            display: block;
+            color: #77766e;
+            font-size: 13px;
+            line-height: 1.6
+        }
+
+        .direct-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 20px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            background: #217a4b;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            transition: background .2s
+        }
+
+        .direct-whatsapp:hover {
+            background: #17623b
+        }
+
+        .contact-detail a {
+            color: #75602f;
+            text-decoration: none
+        }
+
+        .contact-detail a:hover {
+            text-decoration: underline
+        }
+
+        .contact-note {
+            margin-top: 20px;
+            padding: 15px 16px;
+            border-radius: 12px;
+            background: #eeeadf;
+            color: #676253;
+            font-size: 12px;
+            line-height: 1.6
+        }
+
+        .contact-form-card {
+            padding: 34px
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 17px;
+            margin-top: 25px
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px
+        }
+
+        .field.full {
+            grid-column: 1/-1
+        }
+
+        .field label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #41483f
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #dedbd2;
+            border-radius: 10px;
+            padding: 13px 14px;
+            background: #fff;
+            color: #283029;
+            font: 14px Arial, sans-serif;
+            outline: none;
+            transition: border .2s, box-shadow .2s
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color: #b18a47;
+            box-shadow: 0 0 0 3px rgba(177, 138, 71, .13)
+        }
+
+        .field textarea {
+            min-height: 132px;
+            resize: vertical
+        }
+
+        .contact-submit {
+            grid-column: 1/-1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-top: 3px
+        }
+
+        .contact-submit button {
+            border: 0;
+            border-radius: 10px;
+            background: #b18a47;
+            color: #fff;
+            padding: 14px 22px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background .2s, transform .2s
+        }
+
+        .contact-submit button:hover {
+            background: #967136;
+            transform: translateY(-1px)
+        }
+
+        .contact-submit small {
+            color: #89877e;
+            font-size: 11px;
+            line-height: 1.5
+        }
+
+        .contact-status {
+            grid-column: 1/-1;
+            display: none;
+            padding: 12px 14px;
+            border-radius: 9px;
+            background: #f4efe3;
+            color: #62502d;
+            font-size: 13px;
+            line-height: 1.5
+        }
+
+        .contact-status.show {
+            display: block
+        }
+
+        .contact-bottom {
+            text-align: center;
+            margin: 52px 0 0
+        }
+
+        .contact-bottom h3 {
+            font: 26px Georgia, serif;
+            color: #293129;
+            margin: 0 0 9px
+        }
+
+        .contact-bottom p {
+            color: #77766e;
+            font-size: 14px;
+            margin: 0 0 20px
+        }
+
+        .contact-bottom a {
+            display: inline-block;
+            text-decoration: none;
+            border: 1px solid #c4a15e;
+            border-radius: 9px;
+            padding: 12px 19px;
+            color: #80602b;
+            font-size: 13px;
+            font-weight: 700
+        }
+
+        @media(max-width:760px) {
+            .contact-hero {
+                padding: 58px 20px 70px
+            }
+
+            .contact-main {
+                padding: 0 16px;
+                margin-top: -25px
+            }
+
+            .contact-layout {
+                grid-template-columns: 1fr
+            }
+
+            .contact-info,
+            .contact-form-card {
+                padding: 25px
+            }
+
+            .contact-form {
+                grid-template-columns: 1fr
+            }
+
+            .field.full,
+            .contact-submit,
+            .contact-status {
+                grid-column: 1
+            }
+
+            .contact-submit {
+                align-items: flex-start;
+                flex-direction: column
+            }
+
+            .contact-submit button {
+                width: 100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="announcement">Clear information · Thoughtful financial planning</div>
+    <header>
+        <nav class="mainnav"><a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>SJH
+                        INVESTMENT</strong><small>PLAN INFORMATION</small></span></a>
+            <div class="navlinks" id="navlinks"><a href="index.html">Home</a><a href="plans.html">Plans</a><a
+                    href="about.html">About</a><a href="contact.html" class="active">Contact</a></div><a class="nav-cta"
+                href="plans.html">View all plans</a><button class="menu" id="menu"
+                aria-label="Toggle navigation">☰</button>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-hero">
+            <div class="contact-hero-inner"><span class="contact-kicker">We'd love to hear from you</span>
+                <h1>Let's start a conversation.</h1>
+                <p>Need help understanding a plan or finding the information you're looking for? Send us your enquiry
+                    and we'll be glad to hear from you.</p>
+            </div>
+        </section>
+        <section class="contact-main">
+            <div class="contact-layout">
+                <aside class="contact-info"><span class="eyebrow">Contact information</span>
+                    <h2>Get in touch</h2>
+                    <p>Have a question about one of our plans? Contact us by email, phone or WhatsApp.</p>
+                    <div class="contact-detail">
+                        <div class="contact-icon">✉</div>
+                        <div><strong>Email</strong><span><a
+                                    href="mailto:rahasattam2004@gmail.com">rahasattam2004@gmail.com</a></span></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">☎</div>
+                        <div><strong>Phone / WhatsApp</strong><span><a href="tel:+919732723757">9732723757</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">⌖</div>
+                        <div><strong>Office</strong><span>Canning</span></div>
+                    </div><a class="direct-whatsapp" href="https://wa.me/919732723757" target="_blank"
+                        rel="noopener noreferrer">☏ &nbsp; Chat directly on WhatsApp <span>→</span></a>
+                
+                </aside>
+                <section class="contact-form-card"><span class="eyebrow">Send an enquiry</span>
+                    <h2>How can we help?</h2>
+                    <p>Fill in the details below and tell us a little about what you need.</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text"
+                                placeholder="Enter your name" required></div>
+                        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone"
+                                type="tel" placeholder="Enter your phone number" required></div>
+                        <div class="field"><label for="email">Email address</label><input id="email" name="email"
+                                type="email" placeholder="you@example.com"></div>
+                        <div class="field"><label for="subject">Enquiry about</label><select id="subject" name="subject"
+                                required>
+                                <option value="">Select a plan or topic</option>
+                                <option>Recurring Deposit (RD)</option>
+                                <option>Daily Deposit Plan (DDP)</option>
+                                <option>Monthly Income Plan (MIP)</option>
+                                <option>Fixed Deposit (FD)</option>
+                                <option>Sukanya Bachat Plan</option>
+                                <option>Pension Bachat Plan</option>
+                                <option>Education Bachat Plan</option>
+                                <option>General enquiry</option>
+                            </select></div>
+                        <div class="field full"><label for="message">Your message</label><textarea id="message"
+                                name="message" placeholder="Write your question or message..." required></textarea>
+                        </div>
+                        <div class="contact-status" id="contactStatus" role="status">Your WhatsApp message is being
+                            prepared. If WhatsApp does not open automatically, use the direct chat button.</div>
+                        <div class="contact-submit"><button type="submit">Send message&nbsp; →</button><small>Send
+                                securely through your WhatsApp app.<br>You can review the message before
+                                sending.</small></div>
+                    </form>
+                </section>
+            </div>
+            <div class="contact-bottom">
+                <h3>Still exploring your options?</h3>
+                <p>Take a look at the available plan information.</p><a href="plans.html">Explore investment plans&nbsp;
+                    →</a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="footer-logo" href="index.html"><span class="footer-mark">S</span><span><strong>SJH
+                            INVESTMENT</strong><small>PLAN INFORMATION</small></span></a>
+                <p>Explore savings and investment plan information in one place. For plan enquiries and further details,
+                    get in touch with our team.</p>
+            </div>
+            <div class="footer-contact">
+                <span class="footer-heading">CONTACT</span>
+                <a href="mailto:rahasattam2004@gmail.com">rahasattam2004@gmail.com</a>
+                <a href="tel:+919732723757">+91 97327 23757</a>
+                <span>Canning, West Bengal</span>
+            </div>
+            <div class="footer-action">
+                <span class="footer-heading">NEED HELP?</span>
+                <p>Have a question about one of our plans? Send us an enquiry.</p>
+                <a class="footer-whatsapp" href="https://wa.me/919732723757" target="_blank" rel="noopener">Chat on
+                    WhatsApp <span>↗</span></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span class="footer-year"></span> SJH Investment. All rights reserved.</span>
+            <span class="footer-note">Plan information for reference. Please confirm current terms before making a
+                decision.</span>
+        </div>
+    </footer>
+    <style>
+        .site-footer {
+            background: #17251e;
+            color: #e9e8df;
+            margin-top: 0;
+            padding: 0 24px
+        }
+
+        .site-footer * {
+            box-sizing: border-box
+        }
+
+        .footer-main {
+            max-width: 1180px;
+            margin: auto;
+            padding: 55px 0 42px;
+            display: grid;
+            grid-template-columns: 1.3fr .9fr .9fr;
+            gap: 55px
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #fff
+        }
+
+        .footer-mark {
+            width: 43px;
+            height: 43px;
+            border: 1px solid #c5a366;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #dfc38a;
+            font: 25px Georgia
+        }
+
+        .footer-logo strong {
+            display: block;
+            font: bold 14px Georgia;
+            letter-spacing: 2px
+        }
+
+        .footer-logo small {
+            display: block;
+            color: #c4ad7c;
+            font-size: 8px;
+            letter-spacing: 2px;
+            margin-top: 4px
+        }
+
+        .footer-brand p,
+        .footer-action p {
+            max-width: 360px;
+            color: #b9c1b9;
+            font-size: 12px;
+            line-height: 1.85;
+            margin: 19px 0 0
+        }
+
+        .footer-heading {
+            display: block;
+            color: #d8bc83;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 4px 0 18px
+        }
+
+        .footer-contact a,
+        .footer-contact span {
+            display: block;
+            color: #d8ded7;
+            text-decoration: none;
+            font-size: 12px;
+            margin: 0 0 13px;
+            line-height: 1.5
+        }
+
+        .footer-contact a:hover {
+            color: #e4c98e
+        }
+
+        .footer-action p {
+            margin: 0 0 17px
+        }
+
+        .footer-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            padding: 11px 15px;
+            border: 1px solid rgba(216, 188, 131, .6);
+            border-radius: 5px;
+            color: #e6d4ad;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .5px
+        }
+
+        .footer-whatsapp:hover {
+            background: rgba(216, 188, 131, .1)
+        }
+
+        .footer-whatsapp span {
+            font-size: 16px
+        }
+
+        .footer-bottom {
+            max-width: 1180px;
+            margin: auto;
+            padding: 17px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, .13);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: #aeb7ad;
+            font-size: 10px;
+            line-height: 1.6
+        }
+
+        .footer-note {
+            text-align: right;
+            max-width: 520px
+        }
+
+        @media(max-width:700px) {
+            .site-footer {
+                padding: 0 19px
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 28px;
+                padding: 42px 0 30px
+            }
+
+            .footer-brand p {
+                max-width: 100%
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 6px
+            }
+
+            .footer-note {
+                text-align: left
+            }
+        }
+    </style>
+    <script>document.querySelectorAll('.footer-year').forEach(el => el.textContent = new Date().getFullYear());</script>
+    <script>const menuButton = document.getElementById('menu'), navLinks = document.getElementById('navlinks'); if (menuButton) menuButton.onclick = () => { const open = navLinks.classList.toggle('open'); menuButton.textContent = open ? '×' : '☰' }; document.getElementById('year').textContent = new Date().getFullYear(); document.getElementById('contactForm').addEventListener('submit', event => { event.preventDefault(); const form = event.currentTarget; const data = new FormData(form); const details = ['SJH INVESTMENT - Website Enquiry', '', 'Name: ' + (data.get('name') || ''), 'Phone: ' + (data.get('phone') || ''), 'Email: ' + (data.get('email') || 'Not provided'), 'Enquiry about: ' + (data.get('subject') || ''), '', 'Message:', (data.get('message') || '')]; const url = 'https://wa.me/919732723757?text=' + encodeURIComponent(details.join('\n')); document.getElementById('contactStatus').classList.add('show'); window.open(url, '_blank', 'noopener,noreferrer') });</script>
+</body>
+
+</html>

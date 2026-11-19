@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>About | SJH Investment</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .about-hero {
+            background: radial-gradient(circle at 82% 12%, rgba(178, 139, 75, .18), transparent 28%), linear-gradient(120deg, #f5f2e9, #fffefa);
+            padding: 68px 24px 76px;
+            text-align: center
+        }
+
+        .about-hero .eyebrow {
+            display: inline-block
+        }
+
+        .about-hero h1 {
+            font: clamp(38px, 5vw, 58px)/1.12 Georgia, serif;
+            margin: 16px 0;
+            color: #252b25
+        }
+
+        .about-hero p {
+            max-width: 690px;
+            margin: 0 auto;
+            color: #72756d;
+            line-height: 1.85;
+            font-size: 15px
+        }
+
+        .about-wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 64px 24px 80px
+        }
+
+        .about-intro {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 42px;
+            align-items: center
+        }
+
+        .about-image-card {
+            border: 1px solid #e5dfd1;
+            border-radius: 20px;
+            padding: 12px;
+            background: #f7f5ef;
+            box-shadow: 0 16px 42px rgba(40, 42, 34, .07)
+        }
+
+        .about-static-image {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4/4.3;
+            object-fit: cover;
+            border-radius: 14px;
+            background: #e9e2d2
+        }
+
+        .about-copy h2 {
+            font: clamp(29px, 3.5vw, 40px)/1.2 Georgia, serif;
+            color: #252b25;
+            margin: 13px 0 18px
+        }
+
+        .about-copy p {
+            font-size: 14px;
+            line-height: 1.9;
+            color: #6f726b;
+            margin: 0 0 14px
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 58px
+        }
+
+        .value-card {
+            border: 1px solid #e9e5dc;
+            border-radius: 14px;
+            padding: 23px;
+            background: #fff
+        }
+
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 11px;
+            background: #f3eee3;
+            color: #9a773e;
+            display: grid;
+            place-items: center;
+            font-size: 19px
+        }
+
+        .value-card h3 {
+            font: 21px Georgia;
+            color: #343a33;
+            margin: 16px 0 8px
+        }
+
+        .value-card p {
+            font-size: 12px;
+            line-height: 1.75;
+            color: #777970;
+            margin: 0
+        }
+
+        .plan-overview {
+            margin-top: 62px;
+            padding: 34px;
+            border-radius: 18px;
+            background: #202d26;
+            color: #fff
+        }
+
+        .plan-overview h2 {
+            font: 30px Georgia;
+            margin: 0 0 10px
+        }
+
+        .plan-overview>p {
+            color: #d0d6cf;
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 0 0 22px
+        }
+
+        .plan-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .plan-tags a {
+            border: 1px solid #657267;
+            border-radius: 30px;
+            padding: 9px 14px;
+            color: #f2e5c8;
+            font-size: 12px
+        }
+
+        .plan-tags a:hover {
+            background: #354d40
+        }
+
+        .about-disclaimer {
+            margin-top: 22px;
+            padding: 16px 18px;
+            border-left: 3px solid #b28b4b;
+            background: #f7f5ef;
+            color: #77766e;
+            font-size: 11px;
+            line-height: 1.7
+        }
+
+        @media(max-width:760px) {
+            .about-hero {
+                padding: 52px 20px 60px
+            }
+
+            .about-wrap {
+                padding: 42px 17px 60px
+            }
+
+            .about-intro {
+                grid-template-columns: 1fr;
+                gap: 30px
+            }
+
+            .about-values {
+                grid-template-columns: 1fr;
+                margin-top: 38px
+            }
+
+            .plan-overview {
+                padding: 25px 20px;
+                margin-top: 42px
+            }
+
+            .upload-actions {
+                align-items: stretch;
+                flex-direction: column
+            }
+
+            .upload-actions label,
+            .upload-actions button {
+                text-align: center
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="announcement">Clear information · Thoughtful financial planning</div>
+    <header>
+        <nav class="mainnav"><a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>SJH
+                        INVESTMENT</strong><small>PLAN INFORMATION</small></span></a>
+            <div class="navlinks" id="navlinks"><a href="index.html">Home</a><a href="plans.html">Plans</a><a
+                    href="about.html" class="active">About</a><a href="contact.html">Contact</a></div><a class="nav-cta"
+                href="plans.html">View all plans</a><button class="menu" id="menu"
+                aria-label="Toggle navigation">☰</button>
+        </nav>
+    </header>
+    <main>
+        <section class="about-hero"><span class="eyebrow">Get to know us</span>
+            <h1>About SJH Investment</h1>
+            <p>A simple place to explore savings and investment plan information, compare available options and find the
+                details that matter to your goals.</p>
+        </section>
+        <section class="about-wrap">
+            <div class="about-intro">
+                <div class="about-image-card">
+                    <svg class="about-static-image" viewBox="0 0 640 690" role="img"
+                        aria-label="Decorative gold and green SJH Investment savings illustration"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                                <stop stop-color="#26382e" />
+                                <stop offset="1" stop-color="#111c17" />
+                            </linearGradient>
+                            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+                                <stop stop-color="#f3dfaa" />
+                                <stop offset=".5" stop-color="#bd9146" />
+                                <stop offset="1" stop-color="#80602d" />
+                            </linearGradient>
+                            <radialGradient id="glow">
+                                <stop stop-color="#d6b46f" stop-opacity=".32" />
+                                <stop offset="1" stop-color="#d6b46f" stop-opacity="0" />
+                            </radialGradient>
+                        </defs>
+                        <rect width="640" height="690" rx="24" fill="url(#bg)" />
+                        <circle cx="480" cy="150" r="230" fill="url(#glow)" />
+                        <circle cx="320" cy="330" r="190" fill="none" stroke="#d5b36d" stroke-opacity=".16"
+                            stroke-width="2" />
+                        <circle cx="320" cy="330" r="155" fill="none" stroke="#d5b36d" stroke-opacity=".24"
+                            stroke-width="2" />
+                        <path d="M110 500h420" stroke="#d4b16b" stroke-opacity=".35" stroke-width="2" />
+                        <path d="M160 460l70-68 64 30 94-120 92-72" fill="none" stroke="url(#gold)" stroke-width="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M448 230h32v32" fill="none" stroke="url(#gold)" stroke-width="9" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <g fill="url(#gold)" stroke="#f4dfad" stroke-width="3">
+                            <circle cx="245" cy="250" r="67" />
+                            <circle cx="245" cy="250" r="52" fill="none" />
+                            <circle cx="390" cy="400" r="52" />
+                            <circle cx="390" cy="400" r="39" fill="none" />
+                        </g>
+                        <g fill="#26382e" font-family="Georgia,serif" text-anchor="middle"><text x="245" y="270"
+                                font-size="58">₹</text><text x="390" y="416" font-size="42">₹</text></g>
+                        <text x="320" y="570" fill="#f4e6c5" text-anchor="middle" font-family="Georgia,serif"
+                            font-size="34" letter-spacing="5">SJH</text><text x="320" y="608" fill="#d4bd8b"
+                            text-anchor="middle" font-family="Arial,sans-serif" font-size="15"
+                            letter-spacing="4">INVESTMENT</text><text x="320" y="646" fill="#b8c0b8"
+                            text-anchor="middle" font-family="Arial,sans-serif" font-size="11" letter-spacing="2">PLAN
+                            INFORMATION</text>
+                    </svg>
+                </div>
+                <div class="about-copy"><span class="eyebrow">Our purpose</span>
+                    <h2>Making plan information easier to explore.</h2>
+                    <p>SJH Investment presents a collection of savings and investment plan categories in one
+                        easy-to-browse website. Visitors can open each plan on its own page and review the information
+                        and tables displayed there.</p>
+                    <p>The website currently features Recurring Deposit (RD), Daily Deposit Plan (DDP), Monthly Income
+                        Plan (MIP), Fixed Deposit (FD), Sukanya Bachat Plan, Pension Bachat Plan and Education Bachat
+                        Plan.</p>
+                    <p>Our aim with this website is to keep plan information organised and make it easier for visitors
+                        to send questions through the contact page.</p>
+                </div>
+            </div>
+            <div class="about-values">
+                <article class="value-card">
+                    <div class="value-icon">⌕</div>
+                    <h3>Easy to explore</h3>
+                    <p>Each plan category has a dedicated page, so visitors can find relevant information without
+                        navigating through one long page.</p>
+                </article>
+                <article class="value-card">
+                    <div class="value-icon">▤</div>
+                    <h3>Plan details in view</h3>
+                    <p>Available plan tables and duration options are organised by category for convenient reference.
+                    </p>
+                </article>
+                <article class="value-card">
+                    <div class="value-icon">✉</div>
+                    <h3>Enquiry friendly</h3>
+                    <p>Visitors can use the contact page to prepare an enquiry about a plan or a general topic.</p>
+                </article>
+            </div>
+            
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="footer-logo" href="index.html"><span class="footer-mark">S</span><span><strong>SJH
+                            INVESTMENT</strong><small>PLAN INFORMATION</small></span></a>
+                <p>Explore savings and investment plan information in one place. For plan enquiries and further details,
+                    get in touch with our team.</p>
+            </div>
+            <div class="footer-contact">
+                <span class="footer-heading">CONTACT</span>
+                <a href="mailto:rahasattam2004@gmail.com">rahasattam2004@gmail.com</a>
+                <a href="tel:+919732723757">+91 97327 23757</a>
+                <span>Canning, West Bengal</span>
+            </div>
+            <div class="footer-action">
+                <span class="footer-heading">NEED HELP?</span>
+                <p>Have a question about one of our plans? Send us an enquiry.</p>
+                <a class="footer-whatsapp" href="https://wa.me/919732723757" target="_blank" rel="noopener">Chat on
+                    WhatsApp <span>↗</span></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span class="footer-year"></span> SJH Investment. All rights reserved.</span>
+            <span class="footer-note">Plan information for reference. Please confirm current terms before making a
+                decision.</span>
+        </div>
+    </footer>
+    <style>
+        .site-footer {
+            background: #17251e;
+            color: #e9e8df;
+            margin-top: 0;
+            padding: 0 24px
+        }
+
+        .site-footer * {
+            box-sizing: border-box
+        }
+
+        .footer-main {
+            max-width: 1180px;
+            margin: auto;
+            padding: 55px 0 42px;
+            display: grid;
+            grid-template-columns: 1.3fr .9fr .9fr;
+            gap: 55px
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #fff
+        }
+
+        .footer-mark {
+            width: 43px;
+            height: 43px;
+            border: 1px solid #c5a366;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #dfc38a;
+            font: 25px Georgia
+        }
+
+        .footer-logo strong {
+            display: block;
+            font: bold 14px Georgia;
+            letter-spacing: 2px
+        }
+
+        .footer-logo small {
+            display: block;
+            color: #c4ad7c;
+            font-size: 8px;
+            letter-spacing: 2px;
+            margin-top: 4px
+        }
+
+        .footer-brand p,
+        .footer-action p {
+            max-width: 360px;
+            color: #b9c1b9;
+            font-size: 12px;
+            line-height: 1.85;
+            margin: 19px 0 0
+        }
+
+        .footer-heading {
+            display: block;
+            color: #d8bc83;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 4px 0 18px
+        }
+
+        .footer-contact a,
+        .footer-contact span {
+            display: block;
+            color: #d8ded7;
+            text-decoration: none;
+            font-size: 12px;
+            margin: 0 0 13px;
+            line-height: 1.5
+        }
+
+        .footer-contact a:hover {
+            color: #e4c98e
+        }
+
+        .footer-action p {
+            margin: 0 0 17px
+        }
+
+        .footer-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            padding: 11px 15px;
+            border: 1px solid rgba(216, 188, 131, .6);
+            border-radius: 5px;
+            color: #e6d4ad;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .5px
+        }
+
+        .footer-whatsapp:hover {
+            background: rgba(216, 188, 131, .1)
+        }
+
+        .footer-whatsapp span {
+            font-size: 16px
+        }
+
+        .footer-bottom {
+            max-width: 1180px;
+            margin: auto;
+            padding: 17px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, .13);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: #aeb7ad;
+            font-size: 10px;
+            line-height: 1.6
+        }
+
+        .footer-note {
+            text-align: right;
+            max-width: 520px
+        }
+
+        @media(max-width:700px) {
+            .site-footer {
+                padding: 0 19px
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 28px;
+                padding: 42px 0 30px
+            }
+
+            .footer-brand p {
+                max-width: 100%
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 6px
+            }
+
+            .footer-note {
+                text-align: left
+            }
+        }
+    </style>
+    <script>document.querySelectorAll('.footer-year').forEach(el => el.textContent = new Date().getFullYear());</script>
+    <script>
+        const menuButton = document.getElementById('menu'), navLinks = document.getElementById('navlinks'); if (menuButton) menuButton.onclick = () => { const open = navLinks.classList.toggle('open'); menuButton.textContent = open ? '×' : '☰' }; document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
