@@ -1,0 +1,4 @@
+const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+if(menu&&links){menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰';});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));}
+document.querySelectorAll('[data-plan-tab]').forEach(tab=>tab.addEventListener('click',()=>{const target=tab.dataset.planTab;document.querySelectorAll('[data-plan-tab]').forEach(t=>{t.classList.toggle('active',t===tab);t.setAttribute('aria-selected',String(t===tab));});document.querySelectorAll('[data-plan-panel]').forEach(panel=>panel.classList.toggle('hidden',panel.dataset.planPanel!==target));}));
+document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
